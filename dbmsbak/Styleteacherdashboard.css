@@ -1,0 +1,115 @@
+h1{
+	font-family:sans-serif;
+	text-align: center;
+	font-size: 50px;
+	background: #3c8dbc;
+	margin: 20px;
+}
+#assignment{
+	width: 120px;
+	height: 120px;
+	position: relative;
+	left:350px;
+	top:85px;
+}
+#result{
+	width: 120px;
+	height: 120px;
+	position: relative;
+	left:500px;
+	top:85px;
+}
+#teacher{
+	width: 120px;
+	height: 120px;
+	position: relative;
+	left:650px;
+	top:85px;
+}
+#viewstud{
+	width: 120px;
+	height: 120px;
+	position: relative;
+	left:120px;
+	top:325px;
+}
+#pc{
+	width: 120px;
+	height: 120px;
+	position: relative;
+	left:280px;
+	top:325px;
+}
+.ass{
+	text-decoration: none;
+	font-style: normal;
+	color: black;
+	padding: 10px;
+	position: relative;
+	top: 120px;
+	left: -295px;
+	font-size: 20px;
+}
+.mar{
+	text-decoration: none;
+	font-style: normal;
+	color: black;
+	padding: 10px;
+	position: relative;
+	top: 120px;
+	left: -183px;
+	font-size: 20px;
+}
+.upd{
+	text-decoration: none;
+	font-style: normal;
+	color: black;
+	padding: 10px;
+	position: relative;
+	top: 120px;
+	left: -14px;
+	font-size: 20px;
+}
+.vsd{
+	text-decoration: none;
+	font-style: normal;
+	color: black;
+	padding: 10px;
+	position: relative;
+	top: 370px;
+	left: -550px;
+	font-size: 20px;
+}
+.pci{
+	text-decoration: none;
+	font-style: normal;
+	color: black;
+	padding: 10px;
+	position: relative;
+	top: 370px;
+	left: -385px;
+	font-size: 20px;
+}
+.log{
+	text-decoration: none;
+	font-style: normal;
+	color: black;
+	padding: 10px;
+	position: relative;
+	top: 250px;
+	left: -24px;
+	font-size: 20px;
+}
+ a:hover{
+	text-decoration: underline;
+	font-style: italic;
+	color: blue ;
+}
+footer{
+	padding-top: 500px;
+	padding-left: 34px;
+	font-variant: small-caps;
+	text-align: center;
+	color: #000000;	
+	font-size: 14px;
+}

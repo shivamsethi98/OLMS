@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<title>
+		Student Dashboard
+	</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="skeleton.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="Stylestuddashboard.css">
+
+
+	<h1>Contents</h1>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+	<a href="#" target="_blank">
+		<img id="assignment" src="book1.png">
+	</a>
+
+	<a href="#" target="_blank">
+	<img id="result" src="result.png">
+	</a>
+
+	<a href="#" target="_blank">
+	<img id="student" src="viewstud.jpg">
+	</a>
+	
+	<a class="ass" href="#">Assignments</a>
+	<a class="mar" href="#">Marks</a>
+	<a class="upd" href="#">Update</a>
+	<a class="log" href="{{ url_for('slogout')}}">Logout</a>
+    </div>
+</div>
+</body>
+</html>

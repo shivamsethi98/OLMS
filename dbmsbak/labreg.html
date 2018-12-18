@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<title>
+		Lab Registration
+	</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="static/css/normalize.css">
+    <link rel="stylesheet" href="static/css/skeleton.css">
+</head>
+<body background="images/maxresdefault.jpg" style="font-family:sans-serif;text-align: center;">
+	<div class="container" style=" border-radius: 5px;background-color: #f2f2f2">
+	<h1 style="font-family:font-family:Lucida Sans Unicode;text-align: center;font-size: 50px;background: #F08080">Lab Registration</h1>
+		<table align="center">
+		<form>
+			<tr>
+				<th>Lab ID</th>
+				<th><input type="text" name="LID" placeholder="Lab ID" required></th>
+			</tr>	
+			<tr>
+				<th>Room No.</th>
+				<th><input type="text" name="Rno" placeholder="Room number" required></th>
+			</tr>
+			<tr>
+				<th>Description</th>
+				<th> <select id="Sub" name="Subject" required>
+				    	<option value="Sub">---Subject---</option>
+          				<option value="Sub1">Subject 1</option>
+          				<option value="Sub2">Subject 2</option>
+          				<option value="Sub3">Subject 3</option>
+          				<option value="Sub3">Subject 4</option>
+        			</select>
+        		</th>
+			</tr>
+		</form>
+			<tr>
+				<th>Faculty ID</th>
+				<th><input type="text" name="FID" placeholder="Faculty ID" required></th>
+			</tr>
+			<tr>
+				<th id="submit"><input class="button-primary" type="submit" value="Submit"></th>
+			</tr>
+		</table>
+	</div>
+	<footer><p><b>Copyright&copy; Darsh and Shivam</b></p></footer>
+</body>
+</html>

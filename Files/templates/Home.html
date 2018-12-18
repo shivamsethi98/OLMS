@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<title>
+		Homepage
+	</title>
+	<meta charset="utf-8" />
+<link rel="stylesheet" href="{{  url_for('static' ,filename = 'Stylehome.css')  }}">
+	<h1>Online Lab Management System</h1>
+</head>
+<body background="  {{url_for('static' ,filename = 'maxresdefault.jpg')}}  ">
+	<div id="overall">
+		{% with messages = get_flashed_messages() %}
+     {% if messages %}
+      {% for message in messages %}
+        <p><font color="red">{{message}}</font></p>
+        {% endfor %}
+      {% endif %}
+     {% endwith %}
+	<fieldset id="teacher">
+		<ul id="tul">
+			<li><b>Login for Teachers</b><br></li>
+			<li>With Responsive and Fresh Look and Feel</li>
+		</ul>
+		<a href="{{ url_for('tlog') }}">Login</a>
+		<a href="{{ url_for('treg') }}">Register</a>
+		<legend><b>Login for Administrators</b></legend>
+	</fieldset>
+	<fieldset id="student">
+		<legend><b>Login for Students</b></legend>
+		<ul id="sul">
+			<li><b>Login for Students</b><br><br></li>
+		</ul>
+		<a href="{{ url_for('slog') }}">Login</a>
+		<a href="{{ url_for('sreg') }}">Register</a>
+	</fieldset>
+	<fieldset id="lab">
+		<ul id="lul">
+			<li><b>Login for Labs</b><br></li>
+		</ul>
+		<a href="{{ url_for('labreg') }}" target="_blank">Register</a>
+		<legend><b>Login for  Lab Administrators</b></legend>
+	</fieldset>
+	</div>
+	<footer><p>Copyright© Darsh and Shivam</p></footer>
+</body>
+</html>

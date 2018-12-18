@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{  url_for('static' ,filename = 'normalize.css')  }}">
+<link rel="stylesheet" href="{{  url_for('static' ,filename = 'skeleton.css')  }}">
+
+<title>Student Login</title>
+</head>
+<body background="  {{url_for('static' ,filename = 'maxresdefault.jpg')}}  ">
+
+<h2 style="text-align:center;background:#F08080;font-size:50px;font-family:Lucida Sans Unicode">Student Login</h2>
+
+<div class="container">
+    {% with messages = get_flashed_messages() %}
+     {% if messages %}
+      {% for message in messages %}
+        <p><font color="red">{{message}}</font></p>
+        {% endfor %}
+      {% endif %}
+     {% endwith %}
+
+    <table>
+   <form method="POST">
+       {{ form.hidden_tag() }}
+			<tr>
+				<th>{{ form.RegNo.label}}</th>
+                <th>{{ form.RegNo  }}</th>
+                <th>
+                    <ul>
+                    {%for error in form.RegNo.errors %}
+                    <li style="color:red;">{{ error }}</li>
+                    {% endfor %}
+                    </ul>
+                </th>
+			</tr>
+            <tr>
+				<th>{{ form.password.label}}</th>
+				<th> {{ form.password}}</th>
+                <th>
+                    <ul>
+                    {%for error in form.password.errors %}
+                    <li style="color:red;">{{ error }}</li>
+                    {% endfor %}
+                    </ul>
+                </th>
+			</tr>
+            <tr>
+			<br>
+				<th>{{ form.Submit(class="button-primary") }}</th>
+			</tr>
+		</table>
+		</form>
+	</div>
+
+</body>
+</html>

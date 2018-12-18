@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+	<title>
+		Teacher Dashboard
+	</title>
+	<meta charset="utf-8" />
+	<<link rel="stylesheet" href="{{  url_for('static' ,filename = 'Styleteacherdashboard.css')  }}">
+	<h1>Contents</h1>
+</head>
+<body background="  {{url_for('static' ,filename = 'maxresdefault.jpg')}}  ">
+	<h1>{{admin}}</h1>
+
+	<a href="#" target="_blank">
+		<img id="assignment" src="{{  url_for('static' ,filename = 'book1.png')  }}">g">
+	</a>
+
+	<a href="#" target="_blank">
+	<img id="result" src="{{  url_for('static' ,filename = 'result.png')  }}">
+	</a>
+
+	<a href="#" target="_blank">
+	<img id="teacher" src="{{  url_for('static' ,filename = 'teacher.jpg')  }}">
+	</a>
+	
+	<a href="#" target="_blank">
+	<img id="viewstud" src="{{  url_for('static' ,filename = 'viewstud.jpg')  }}">
+	</a>
+
+	<a href="#" target="_blank">
+	<img id="pc" src="{{  url_for('static' ,filename = 'pc.png')  }}">
+	</a>
+
+	<a class="ass" href="#">Assignment Upload</a>
+	<a class="mar" href="#">Mark Upload</a>
+	<a class="upd" href="#">Update</a>
+	<a class="vsd" href="#">View Student Data </a>
+	<a class="pci" href="#">PC Info</a>
+	<a class="log" href="{{ url_for('tlogout')}}">Logout</a>
+	<footer><p>Copyright&copy; Darsh and Shivam</p></footer>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+	<title>
+		Question Download
+	</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="{{  url_for('static' ,filename = 'normalize.css')  }}">
+	<link rel="stylesheet" href="{{  url_for('static' ,filename = 'skeleton.css')  }}">
+	<link rel="stylesheet" href="{{  url_for('static' ,filename = 'Stylestudpage.css')  }}">
+</head>
+<body background="{{url_for('static' ,filename = 'maxresdefault.jpg')}}" style="font-family : sans-serif; background-color : #e3e3e3; margin :auto;">
+<div class="container">
+    <div class="row">
+    <div class="eight columns u-pull-left">
+    </div><center><h3>Welcome {{ session['username1']}} to Your Dashboard</h3></center>
+</div>
+    </div>
+</div>
+	<br>
+		<p>
+			<a href="{{ url_for('tcourse') }}"><b>Course Material Upload</b></a>
+            <a href="{{ url_for('tquesupload') }}"><b>Question Upload</b></a>
+            <a href="{{ url_for('tansdown') }}"><b>Student Answer Document Download</b></a>
+			<!--<a href="#"><b>Marks Assignment</b></a>-->
+            <a href="{{ url_for('tviewprofile') }}"><b>View Profile</b></a>
+			<a href="{{ url_for('tupdate') }}"><b>Update Profile</b></a>
+			<a href="{{ url_for('labview') }}"><b>Lab Details</b></a>
+            <a href="{{ url_for('tlogout') }}"><b>Logout</b></a>
+		</p><br>
+	<div class="hero">
+        <div class="container">
+            {% with messages = get_flashed_messages() %}
+     {% if messages %}
+      {% for message in messages %}
+        <p><font color="red">{{message}}</font></p>
+        {% endfor %}
+      {% endif %}
+     {% endwith %}
+                <div class="row">
+                    <div class="six columns">
+                        <table>
+                        <tr>
+                        <tr>
+                            <form method="POST" enctype="multipart/form-data">
+                                {{ form1.hidden_tag() }}
+				<th>{{ form1.asse.label }}</th>
+                <th>{{ form1.asse  }}</th>
+                <th>
+                    <ul>
+                    {%for error in form1.asse.errors %}
+                    <li style="color:red;">{{ error }}</li>
+                    {% endfor %}
+                    </ul>
+                </th>
+			</tr>
+                        <tr>
+
+                                <th>{{ form1.fillet }}</th>
+                        </tr>
+            <tr>
+			<br>
+				<th>{{ form1.submit(class="button-primary") }}</th>
+			</tr>
+               </form>
+               </table>
+                </div>
+
+            </div>
+	</div>
+    </div>
+	<footer><p>Copyright&copy; Darsh and Shivam</p></footer>
+</body>
+</html>

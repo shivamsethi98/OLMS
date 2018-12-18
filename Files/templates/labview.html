@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+	<title>
+		Reports View
+	</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="{{  url_for('static' ,filename = 'normalize.css')  }}">
+	<link rel="stylesheet" href="{{  url_for('static' ,filename = 'skeleton.css')  }}">
+	<link rel="stylesheet" href="{{  url_for('static' ,filename = 'Stylestudpage.css')  }}">
+</head>
+<body background="{{url_for('static' ,filename = 'maxresdefault.jpg')}}" style="font-family : sans-serif; background-color : #e3e3e3; margin :auto;">
+<div class="container">
+    <div class="row">
+    <div class="eight columns u-pull-left">
+    </div><center><h3>Welcome {{ session['username1']}} to Your Dashboard</h3></center>
+</div>
+    </div>
+</div>
+	<br>
+		<p>
+			<a href="{{ url_for('tcourse') }}"><b>Course Material Upload</b></a>
+            <a href="{{ url_for('tquesupload') }}"><b>Question Upload</b></a>
+            <a href="{{ url_for('tansdown') }}"><b>Student Answer Document Download</b></a>
+			<!--<a href="#"><b>Marks Assignment</b></a>-->
+            <a href="{{ url_for('tviewprofile') }}"><b>View Profile</b></a>
+			<a href="{{ url_for('tupdate') }}"><b>Update Profile</b></a>
+			<a href="{{ url_for('labview') }}"><b>Lab Details</b></a>
+            <a href="{{ url_for('tlogout') }}"><b>Logout</b></a>
+		</p><br>
+	<div class="hero">
+        <div class="container">
+            <table class="six columns">
+    <tbody>
+    {% for std in xz %}
+    <tr>
+      <td>Staff Name: </td>
+      <td>{{std['staffname']}}</td>
+    </tr>
+    <tr>
+      <td>Staff ID</td>
+      <td>{{std['staffid']}}</td>
+    </tr>
+    <tr>
+        <td>Subject </td>
+        <td>{{std['SubjectID']}}</td>
+    </tr>
+    <tr>
+        <td>Room no. </td>
+        <td>{{std['roomno']}}</td>
+    </tr>
+    <tr>
+        <td>Lab ID </td>
+        <td>{{std['labid']}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+            <!--<div class="three columns">
+                <a href="paris.jpg">
+                    <img src="pc.png" alt="Paris">
+                </a>
+            </div>-->
+	</div>
+    </div>
+	<footer><p>Copyright&copy; Darsh and Shivam</p></footer>
+</body>
+</html>

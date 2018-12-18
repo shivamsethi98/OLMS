@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+	<title>
+		Reports View
+	</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="{{  url_for('static' ,filename = 'normalize.css')  }}">
+	<link rel="stylesheet" href="{{  url_for('static' ,filename = 'skeleton.css')  }}">
+	<link rel="stylesheet" href="{{  url_for('static' ,filename = 'Stylestudpage.css')  }}">
+</head>
+<body background="{{url_for('static' ,filename = 'maxresdefault.jpg')}}" style="font-family : sans-serif; background-color : #e3e3e3; margin :auto;">
+<div class="container">
+    <div class="row">
+    <div class="eight columns u-pull-left">
+    </div><center><h3>Welcome {{ session['username1'] }}</h3></center>
+</div>
+    </div>
+</div>
+	<br>
+		<p>
+			<a href="{{ url_for('tcourse') }}"><b>Course Material Upload</b></a>
+            <a href="{{ url_for('tquesupload') }}"><b>Question Upload</b></a>
+            <a href="{{ url_for('tansdown') }}"><b>Student Answer Document Download</b></a>
+			<a href="{{  url_for('assignmarks')  }}"><b>Assign Marks</b></a>
+            <a href="{{ url_for('tviewprofile') }}"><b>View Profile</b></a>
+            <a href="{{ url_for('tupdate') }}"><b>Update Profile</b></a>
+            <a href="{{ url_for('tlogout') }}"><b>Logout</b></a>
+		</p><br>
+	<div class="hero">
+        <div class="container">
+            <table class="six columns">
+                {% with messages = get_flashed_messages() %}
+     {% if messages %}
+      {% for message in messages %}
+        <p><font color="red">{{message}}</font></p>
+        {% endfor %}
+      {% endif %}
+     {% endwith %}
+    <form method="POST">
+				{{ form.hidden_tag() }}
+            <tr>
+				<th>{{ form.asse.label  }}</th>
+                <th>{{form.asse }}</th>
+                <th>
+                    <ul>
+                    {%for error in form.asse.errors %}
+                    <li style="color:red;">{{ error }}</li>
+                    {% endfor %}
+                    </ul>
+                </th>
+			</tr>
+			<tr>
+				<th>{{ form.RegNo.label  }}</th>
+                <th>{{form.RegNo }}</th>
+                <th>
+                    <ul>
+                    {%for error in form.RegNo.errors %}
+                    <li style="color:red;">{{ error }}</li>
+                    {% endfor %}
+                    </ul>
+                </th>
+			</tr>
+			<tr>
+				<th>{{ form.mark.label  }}</th>
+                <th>{{form.mark }}</th>
+                <th>
+                    <ul>
+                    {%for error in form.mark.errors %}
+                    <li style="color:red;">{{ error }}</li>
+                    {% endfor %}
+                    </ul>
+                </th>
+			</tr>
+			<tr>
+			<br>
+				<th>{{ form.submit(class="button-primary") }}</th>
+			</tr>
+		</form>
+</table>
+            <!--<div class="three columns">
+                <a href="paris.jpg">
+                    <img src="pc.png" alt="Paris">
+                </a>
+            </div>-->
+	</div>
+    </div>
+	<footer><p>Copyright&copy; Darsh and Shivam</p></footer>
+</body>
+</html>

@@ -1,0 +1,73 @@
+h1{
+	font-family:sans-serif;
+	text-align: center;
+	font-size: 50px;
+	background: #3c8dbc;
+	margin: 20px;
+}
+#assignment{
+	width: 120px;
+	height: 120px;
+	position: relative;
+	left:350px;
+	top:85px;
+}
+#result{
+	width: 120px;
+	height: 120px;
+	position: relative;
+	left:500px;
+	top:85px;
+}
+#student{
+	width: 120px;
+	height: 120px;
+	position: relative;
+	left:650px;
+	top:85px;
+}
+.ass{
+	text-decoration: none;
+	font-style: normal;
+	color: black;
+	padding: 10px;
+	position: relative;
+	top: 120px;
+	left: -24px;
+	font-size: 20px;
+}
+.mar{
+	text-decoration: none;
+	font-style: normal;
+	color: black;
+	padding: 10px;
+	position: relative;
+	top: 120px;
+	left: 146px;
+	font-size: 20px;
+}
+.upd{
+	text-decoration: none;
+	font-style: normal;
+	color: black;
+	padding: 10px;
+	position: relative;
+	top: 120px;
+	left: 346px;
+	font-size: 20px;
+}
+.log{
+	text-decoration: none;
+	font-style: normal;
+	color: black;
+	padding: 10px;
+	position: relative;
+	top: 250px;
+	left: -24px;
+	font-size: 20px;
+}
+ a:hover{
+	text-decoration: underline;
+	font-style: italic;
+	color: blue ;
+}

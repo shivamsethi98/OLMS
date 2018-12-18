@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Faculty Registeration.</title>
+<link rel="stylesheet" href="{{  url_for('static' ,filename = 'normalize.css')  }}">
+<link rel="stylesheet" href="{{  url_for('static' ,filename = 'skeleton.css')  }}">
+	
+</head>
+<body background="  {{url_for('static' ,filename = 'maxresdefault.jpg')}}  ">
+	<div class="container" style=" border-radius: 5px;background-color: #f2f2f2">
+	<h1 style="font-family:font-family:Lucida Sans Unicode;text-align: center;font-size: 50px;background: #F08080">Faculty Registration</h1>
+		<table align="center">
+		<form method="POST">
+				{{ form.hidden_tag() }}
+			<tr>
+				<th>{{ form.admin.label}}</th>
+                <th>{{ form.admin  }}</th>
+                <th>
+                    <ul>
+                    {%for error in form.admin.errors %}
+                    <li style="color:red;">{{ error }}</li>
+                    {% endfor %}
+                    </ul>
+                </th>
+			</tr>
+			<tr>
+				<th>{{ form.name.label  }}</th>
+                <th>{{ form.name  }}</th>
+                <th>
+                    <ul>
+                    {%for error in form.name.errors %}
+                    <li style="color:red;">{{ error }}</li>
+                    {% endfor %}
+                    </ul>
+                </th>
+			</tr>
+            <tr>
+				<th>{{ form.subw.label  }}</th>
+                <th>{{ form.subw}}</th>
+                <th>
+                    <ul>
+                    {%for error in form.subw.errors %}
+                    <li style="color:red;">{{ error }}</li>
+                    {% endfor %}
+                    </ul>
+                </th>
+			</tr>
+            <tr>
+				<th>{{ form.password.label}}</th>
+				<th> {{ form.password}}</th>
+                <th>
+                    <ul>
+                    {%for error in form.password.errors %}
+                    <li style="color:red;">{{ error }}</li>
+                    {% endfor %}
+                    </ul>
+                </th>
+			</tr>
+            <tr>
+                <th>{{ form.confirm_password.label }}</th>
+				<th>{{ form.confirm_password}}</th>
+                <th>
+                    <ul>
+                    {%for error in form.confirm_password.errors %}
+                    <li style="color:red;">{{ error }}</li>
+                    {% endfor %}
+                    </ul>
+                </th>
+			</tr>
+			<tr>
+			<br>
+				<th>{{ form.submit(class="button-primary") }}</th>
+			</tr>
+		</form>
+		</table>
+	</div>
+    <strong><center><font color="red" size="5">Already Have An Account?<a href ="{{ url_for('tlog') }}"> Sign In!</a></center></font></strong><center>
+	<footer style="font-size: 14px;
+  padding-top: 80px;
+  font-variant: small-caps;
+  text-align: center;
+  color: #f2f2f2;"><p><b>Copyright&copy; Darsh and Shivam</b></p></footer>
+</body>
+</html>

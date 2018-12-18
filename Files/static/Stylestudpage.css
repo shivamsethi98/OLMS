@@ -1,0 +1,40 @@
+h3{
+	font-family:sans-serif;
+	background: #3c8dbc;
+}
+
+a{
+	text-decoration: none;
+	font-style: italic;
+	color: black;
+	padding: 10px;
+}
+ a:hover{
+	text-decoration: underline;
+	font-style: normal;
+	color: blue ;
+}
+.hero {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    position: relative;
+    left: 220px;
+    width: 900px;
+}
+footer{
+	padding-top: 100px;
+	font-variant: small-caps;
+	text-align: center;
+	color: #e3e3e3;	
+}
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}

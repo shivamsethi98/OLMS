@@ -1,0 +1,63 @@
+h1{
+	font-family:sans-serif;
+	text-align: center;
+	font-size: 50px;
+	background: #3c8dbc;
+	margin: 10px;
+}
+footer{
+	font-size: 14px;
+}
+body{
+	font-family: sans-serif;
+	background-color: #e3e3e3;
+	margin:auto;
+	height: 900px;
+}
+#overall{
+	width: 900px;
+	margin: auto;
+}
+ul{
+	list-style: none;
+	padding-left: 8px;
+}
+#tul{
+	color: #008000;
+}
+#sul{
+	color: #808000;
+}
+a{
+	text-decoration: none;
+	font-style: italic;
+	color: black;
+	padding-right: 50px;
+}
+ a:hover{
+	text-decoration: underline;
+	font-style: normal;
+	color: blue ;
+}
+fieldset {
+    font-size: 20px;
+    background: #e3e3e3;
+}
+#teacher{
+	float: left;
+	width: 450px;
+	height: 150px;
+	border: 5px #008000 solid;
+}
+#student{
+	float:right;
+	width: 350px;
+	height: 150px;
+	border: 5px #808000 solid;
+}
+footer{
+	padding-top: 500px;
+	font-variant: small-caps;
+	text-align: center;
+	color: #e3e3e3;	
+}
